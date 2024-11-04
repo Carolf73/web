@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="frontend.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="assests/logo.PNG" alt="logo"  width="350" height="70px" >
+            </div>
+            <nav>
+                <ul>
+                    
+                  <div class="search-container">
+                        <form class="searchbar">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                  </div>
+                      
+                  
+                    
+                    <li><a href="frontend.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Account</a></li> 
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+                    
+                </ul>
+               
+            </nav>
+        </div>
+        <main>
+            <h1 >All Products</h2>
+            <label for="sort">Sort by Price:</label>
+    <select class="sort" id="sort">
+        <option value="">Select</option>
+        <option value="low-to-high">Low to High</option>
+        <option value="high-to-low">High to Low</option>
+    </select>
+            
+            
+            <div class="product">
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="productdetail.html?id=asus-zenbook">
+                    
+                    <img src="https://www.reliancedigital.in/medias/Asus-Zenbook14-Evo-Laptop-494352121-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMjQ1MzN8aW1hZ2UvanBlZ3xpbWFnZXMvaDlkL2g0Yi8xMDEwMDA2MTk5NTAzOC5qcGd8YzY2MTA5ZmQ0ZjU0MjNhYzEwNTY0Yzk5MDlhMDQ5NWM5N2ExMzU4MzdhYzU0YTFjYTI5N2VhM2Y0ZjdlNDZiNQ">
+                    
+                    <h4>Asus Zen Book 14 </h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>1,07,999.00</p>
+                    </a>
+
+                    
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=asus-vivobook">
+                    <img src="https://www.reliancedigital.in/medias/Asus-Vivobook16-Laptop-494353034-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjMxN3xpbWFnZS9qcGVnfGltYWdlcy9oMDIvaDZmLzEwMTMwMDAyMDE4MzM0LmpwZ3w3MGEzZGM5Nzg5Nzk0ZDRkYmNjMDdjZGMxYTE0OTdjYzQxZGM4MDQ4MWQxMzE0NTcwM2Q4NzE5MGNmMmFiMDIx" alt="HRX Sports Shoes">
+                    <h4>Asus Vivobook </h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>40,990.00</p>
+                </a>
+                    
+                
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=hp">
+                    <img src="https://www.reliancedigital.in/medias/HP-15-EC1048AX-Laptops-491997059-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzNzUyMzV8aW1hZ2UvanBlZ3xpbWFnZXMvaDc2L2hmZi85NTg5MTg4NTkxNjQ2LmpwZ3xiZjQyZmJiMDM3Y2RlZjJkNWQ3OWQyNWI5YzNiYWNmOTRiMjc2YTMwZTgwY2MxZDdjZTdmOGI0N2I3NTA4MGVj" alt="HRX Gray Trackpants">
+                    <h4>HP 15</h4>
+                    <div class="rating">★★★☆☆</div>
+                    <p>71,099.00</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=dell">
+                    <img src="https://www.reliancedigital.in/medias/Dell-Ins-Clamshell-3530-493666425-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2MDM0NHxpbWFnZS9qcGVnfGltYWdlcy9oODQvaGVhLzEwMDMzOTgxNDU2NDE0LmpwZ3xkNGU0ZGZmZmFhZjFjZWRiNDYzZTI3OWJlOWVjNTc4MGM2MDMxYmNjMDBhZWRjOWRjZmYyYWI4NWQ5M2EzNjhj" alt="Blue Printed T-Shirt">
+                    <h4>Dell Inspiron</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>65,499.00</p>
+                    </a>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <div class="product">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <a href="productdetail.html?id=kettle">
+                        
+                        <img src="https://www.reliancedigital.in/medias/Butterfly-IBK-1500W-Glass-Kettle-SLV-492391871-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1NTU4N3xpbWFnZS9qcGVnfGltYWdlcy9oNjIvaDE1Lzk3MjYzNTUwMTM2NjIuanBnfGYwYTNmMmYwYTUyNDYzMGNhZjI3YzM2N2JiNjU5ZTYzZjgzNDM2ZTVlOGViMWQ2MWQ2OTQ1ZjYyYWJlMDE0MWY" alt="">
+                        
+                        <h4>Electric Kettle </h4>
+                        <div class="rating">★★★★☆</div>
+                        <p>799.00</p>
+                        </a>
+    
+                        
+                    </div>
+                    <div class="product-card">
+                        <a href="productdetail.html?id=handmixer">
+                            <img src="https://www.reliancedigital.in/medias/Wonderchef-63153504-HANDMIXER-492391975-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMDMwMjV8aW1hZ2UvanBlZ3xpbWFnZXMvaDg4L2g3ZS85NzM5NzgzMzQwMDYyLmpwZ3wxMzhlYWIwMDliZmU2NDYxMDllYzY5ODZjMmM3YmFiM2M4N2MxZDE5ZjAxNDE1OWFiMjQ1MDYxODgxZjEzNjE0" alt="">
+                        <!-- <img src="https://www.reliancedigital.in/medias/Asus-Vivobook16-Laptop-494353034-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjMxN3xpbWFnZS9qcGVnfGltYWdlcy9oMDIvaDZmLzEwMTMwMDAyMDE4MzM0LmpwZ3w3MGEzZGM5Nzg5Nzk0ZDRkYmNjMDdjZGMxYTE0OTdjYzQxZGM4MDQ4MWQxMzE0NTcwM2Q4NzE5MGNmMmFiMDIx" alt="HRX Sports Shoes"> -->
+                        <h4>Hand Mixer  </h4>
+                        <div class="rating">★★★★☆</div>
+                        <p>₹1,099.00</p>
+                    </a>
+                        
+                    
+                    </div>
+                    <div class="product-card">
+                        <a href="productdetail.html?id=grinder">
+                            <img src="https://www.reliancedigital.in/medias/PANASONIC-WET-GRINDER-MK-SW200-TIMER-2LT-491186064-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2MzY3OXxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaDIxLzkyMDY3ODQwMzI3OTguanBnfDRiMjkzOTkwMDRkODI0NzFjNDM0ZTkxYmJlZmM1M2M4NWQ3ZjRjYjkwOGEyYzFjNzU1M2I4ODVlOWNiYTMxMjU" alt="">
+                        <!-- <img src="https://www.reliancedigital.in/medias/HP-15-ec1051AX-Laptops-491947325-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzNDg0ODR8aW1hZ2UvanBlZ3xpbWFnZXMvaDcwL2g5Mi85NTE4NjIzMjkzNDcwLmpwZ3wwMzI2ZTk2NWNhZjg2ODRiMDUzZmVjMWRmNjFjZGI4MThmNmE4YjdlYjliY2Y5OTllYTlhNTUwYjgxNmUyY2Yz" alt="HRX Gray Trackpants"> -->
+                        <h4>Panasonic Grinder</h4>
+                        <div class="rating">★★★☆☆</div>
+                        <p>₹9,999.00</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="productdetail.html?id=washingmachine">
+                            <img src="https://www.reliancedigital.in/medias/Bosch-Semi-Automatic-Washing-20Machine-494338936-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxNjMzMjl8aW1hZ2UvanBlZ3xpbWFnZXMvaDY1L2g4YS8xMDExNTU2NzcxNDMzNC5qcGd8MTlkZjM5YzNkOGQzMDlmOTRmN2E2ZDQxMWI2N2E1NTMzYzEyNzFlOTNhNzNhYjJlYTU5MmMyYThmZGZlYzEwYw" alt="">
+                        <!-- <img src="https://www.reliancedigital.in/medias/Dell-Ins-Clamshell-3530-493666425-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2MDM0NHxpbWFnZS9qcGVnfGltYWdlcy9oODQvaGVhLzEwMDMzOTgxNDU2NDE0LmpwZ3xkNGU0ZGZmZmFhZjFjZWRiNDYzZTI3OWJlOWVjNTc4MGM2MDMxYmNjMDBhZWRjOWRjZmYyYWI4NWQ5M2EzNjhj" alt="Blue Printed T-Shirt"> -->
+                        <h4>Washing Machine</h4>
+                        <div class="rating">★★★★☆</div>
+                        <p>65,499.00</p>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="product">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <a href="productdetail.html?id=ironbox">
+                            
+                            <img src="https://www.reliancedigital.in/medias/Panasonic-NI-P300TASM-Steam-Iron-Blue-491281639-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMTk2OTZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGU5L2gyZS84OTMxMDA0MzgzMjYyLmpwZ3wzNWRlMjZlOGY3YzI5Y2I0NTAwYzI1NjczMjJlODU1MTVmNjAzMjI1MzdiZjVlYmYyMzQ2NTMzYzE1YjNkOGQ4">
+                            
+                            <h4>Panasonic  </h4>
+                            <div class="rating">★★★★☆</div>
+                            <p> ₹2,099.00</p>
+                            </a>
+        
+                            
+                        </div>
+                        <div class="product-card">
+                            <a href="productdetail.html?id=mixer">
+                            <img src="https://www.reliancedigital.in/medias/PREETHI-MIXER-GRINDER-491213757-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMzQxNjJ8aW1hZ2UvanBlZ3xpbWFnZXMvaDBlL2gxYy85Nzc3MDY1OTE4NDk0LmpwZ3w1YmJkYjk2Y2M3YmY2ZjdjNjVmMjJmYWYyYWVkNjFkMGYzMzhiOWE1YjJkNTNjMzllZGYyYmM1ZTkzNWU4NGRi" alt="HRX Sports Shoes">
+                            <h4>Preethi Mixer Grinder </h4>
+                            <div class="rating">★★★★☆</div>
+                            <p>40,990.00</p>
+                        </a>
+                            
+                        
+                        </div>
+                        <div class="product-card">
+                            <a href="productdetail.html?id=cooker">
+                            <img src="https://www.reliancedigital.in/medias/Wonderchef-NutriPot-6-Ltr-SpecialityAppliances-491604285-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzNTU5NjF8aW1hZ2UvanBlZ3xpbWFnZXMvaDUxL2gwMy85NDYyMDU0NTE4ODE0LmpwZ3wwOTMwZmYzNWYzMjBjN2I4M2Q4N2M5MjQyMGU0NGIyNmI1YjIwNWNhODhlOGE1ZDE5Y2E2NzA4NDUyNGFlMTI5" alt="HRX Gray Trackpants">
+                            <h4>Electric Pressure Cooker</h4>
+                            <div class="rating">★★★☆☆</div>
+                            <p>₹7,499.00</p>
+                            </a>
+                        </div>
+                        <div class="product-card">
+                            <a href="productdetail.html?id=oven">
+                            <img src="https://www.reliancedigital.in/medias/Haier-HIL2001MWPH-Microwave-Ovens-491959419-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w5MzE3MXxpbWFnZS9qcGVnfGltYWdlcy9oM2IvaDQ4Lzk1NTMwMDU4MzgzNjYuanBnfGQ2YmY0MDhjZGVhZGQ4ZjI4MGViZTMyMzQzOTE4MTk1NTFjNGUyODcxOTY4NWJhNWJiYjcyNzI0MThjZWY4MjE" alt="Blue Printed T-Shirt">
+                            <h4>Microwave Oven</h4>
+                            <div class="rating">★★★★☆</div>
+                            <p>₹6,390.00</p>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="productdetail.html?id=oppo">
+                    <img src="https://www.reliancedigital.in/medias/Oppo-A79-Black-Mobile-Phone-494268182-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0MzA5Nzd8aW1hZ2UvanBlZ3xpbWFnZXMvaDE2L2gyZi8xMDA3MTkzNTk3NTQ1NC5qcGd8ZTFjZjQ4ODExYmIwMzA5MWUxNmMzM2Q2YTc5YmY3ODkzYTVmNGQyMDZmMTEwMjNkNzY1ZDZjMTJmZWE5OWM2Mg">
+                <h4>Oppo A79 5G</h4>
+                <div class="rating">★★★★☆</div>
+                <p>₹17,499.00</p>
+                </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=realme">
+                    <img src="https://www.reliancedigital.in/medias/Realme-C55-Mob-493665932-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMzg2ODh8aW1hZ2UvanBlZ3xpbWFnZXMvaDZlL2g0Yy85OTc0MTg3NzUzNTAyLmpwZ3wyMTYwZTk3ZGZkNTE4YTUzOWQ0OGYwNWZlYjE5MWYwOTE5ZGM1ZjY3NDQ2OGYxMzJmYTRlY2FlNzVkODFlZDEw" alt="HRX Sports Shoes">
+                <h4>Realme C55</h4>
+                <div class="rating">★★★★☆</div>
+                <p>₹11,999.00</p>
+                </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=poco">
+                    <img src="https://www.reliancedigital.in/medias/Poco-C-51-Smart-Phone-493666208-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyOTA4ODZ8aW1hZ2UvanBlZ3xpbWFnZXMvaDEzL2gxNS85OTgwODMwNTE1MjMwLmpwZ3w5MmQ2NGNlN2MzNTk0MjQ0MjBhNzFiNjgwZjM5ZDRkNzYxNTk2NjcwNTk1MjM5MDkyNjFkMmQ4MTRmZTE3ZTU3" alt="Blue Printed T-Shirt">
+                    <h4>Poco C series C</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>₹7,499.00</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=redmi">
+                    <img src="https://www.reliancedigital.in/medias/Redmi-10A-Smartphones-492850147-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyNzQxOTd8aW1hZ2UvanBlZ3xpbWFnZXMvaGI5L2gyMy85ODMyNDI1NzUwNTU4LmpwZ3wyZWFmNWZkNGQ1NmE5ZmE3Mzg4M2YzNjVhNWJhMDg0ZTdmYWY3MzY2ZjRmM2I1Y2I0Mzc3MTAzODU2NzQxM2I5" alt="HRX Gray Trackpants">
+                <h4>Redmi 10A </h4>
+                <div class="rating">★★★★☆</div>
+                <p>₹7,499.00</p>
+                </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="productdetail.html?id=leno">
+                    <img src="https://www.reliancedigital.in/medias/Lenovo-82RK00VVIN-493839067-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyODI3NTB8aW1hZ2UvanBlZ3xpbWFnZXMvaDNmL2hiYi8xMDA2NDY5NzQ1ODcxOC5qcGd8ZjBhY2UwYTZkYzdmMjM0MDkwZDdlNTM3ZWIwZGU1YmNmMTE0MWFmY2QxMmY1Njg2YzNmYjY0Mzc1ODY5OTUyYw" alt="Red Printed T-Shirt">
+                    <h4>Lenovo Ideapad Slim</h4>
+                    <div class="rating">★★☆☆☆</div>
+                    <p>35,990.00</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=lenogaming">
+                    <img src="https://www.reliancedigital.in/medias/Lenovo-81Y4018DIN-Laptop-491996943-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMTIxODd8aW1hZ2UvanBlZ3xpbWFnZXMvaDY0L2hiZi85ODQ4ODM5MzQwMDYyLmpwZ3w1ZmI1YzI0ZWMzMmIwYzQxZTJmNmY3ZjBjMTY5M2U5YTZhNjBjMzg3OWJkN2E1OTg3NGFmODBkZDUwYTY2ZjVm" alt="HRX Sports Shoes">
+                    <h4>Lenovo 8DIN Idealpad</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>60,990.00</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=lenovo">
+                    <img src="https://www.reliancedigital.in/medias/HP-15S-du3032TU-Laptops-491946582-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMTYxMjV8aW1hZ2UvanBlZ3xpbWFnZXMvaGUzL2hkMC85NDU0NjA0MTI0MTkwLmpwZ3xkYWQwNGZhYjQzZWUyZDhiM2ZlOTg5OWY4ZDcxOTU1MjU3ZTlmNWM2OTY1NjY1YWU5OGQwNGI0MjY5YmE3ZmVl" alt="HRX Gray Trackpants">
+                    <h4>HP 15S</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>71,099.00</p>
+                </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=asus">
+                    <img src="https://www.reliancedigital.in/medias/Asus-TUF-A15-Gaming-Laptop-494422104-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0MzUzMzd8aW1hZ2UvanBlZ3xpbWFnZXMvaDVkL2hhZi8xMDE3Njg0Nzc3MzcyNi5qcGd8NDFjNDI2YzM2NDI1OWJhNjQ5OTI4ZmFhOTYzODAzODk1OTc4NTNiZTM3YWE3ZWEyZDA3OTM2ZjZmNjE3OGIyMA" alt="Blue Printed T-Shirt">
+                    <h4>Asus LP082W TUF GMAING </h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>89,999.00</p>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="productdetail.html?id=nord">
+                    <img src="https://www.reliancedigital.in/medias/OnePlus-Nord-CE4-Mobile-Phone-494352990-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2NDM5NXxpbWFnZS9qcGVnfGltYWdlcy9oMTEvaDJjLzEwMTI2MjY0NDY3NDg2LmpwZ3xjNjM4YTk2ZDk3OTI2NzYwYmZjZmYzYjg2ZWMzMmI0MGJlYTViNDllNTA0NWM1YWEyYzZlYzBjMmQ4YjkyYjkz" alt="Red Printed T-Shirt">
+                    <h4>Oneplus Nord</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>17,999.00</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=op">
+                    <img src="https://www.reliancedigital.in/medias/Oppo-K12x-5G-494422234-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w3MzU4MHxpbWFnZS9qcGVnfGltYWdlcy9oYjAvaGNhLzEwMTc5MjEyNTQxOTgyLmpwZ3xiNWZmOGM0MTY0OThiMGFkNzg4MjE0MDBmNDQzMDNiZTdmMGI5M2RhMmI4ZjAxZTIzZGQxMjk5YTY5MjkzNDM2" alt="HRX Sports Shoes">
+                    <h4>Oppo K12x</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>12,999.00</p>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=mi">
+                    <img src="https://www.reliancedigital.in/medias/Redmi-13C-5G-4-GB-RAM-128-GB-Black-Smartphone-494351686-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzNzM5M3xpbWFnZS9qcGVnfGltYWdlcy9oZDcvaDY3LzEwMDkxMjU5ODU0ODc4LmpwZ3wyZDg5NmY0ZTEyM2M2Y2FlY2ZhOGVmMmY4ZDIzMzk2ZjVlYWZjZWYzZDVkYTc1MmVhZmMxMDM4MjljNWVhN2Y0" alt="HRX Gray Trackpants">
+                    <h4>Xiomi</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>₹10,499.00</p>
+                </a>
+                </div>
+                <div class="product-card">
+                    <a href="productdetail.html?id=12r">
+                
+                    <img src="https://www.reliancedigital.in/medias/One-Plus-12-R-494352321-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NDg0MjJ8aW1hZ2UvanBlZ3xpbWFnZXMvaGQ0L2g2NC8xMDEwODMzNzU4NjIwNi5qcGd8Yjg2ODRmZmRhNjM2ZmU4ZDEzY2I3NmQ3ZmIyOTNlNmQ1MjllODhjNDcwOTVjZmJlZjNhYWY5NzkzMjdlZjYwNw "alt="Blue Printed T-Shirt">
+                    <h4>One plus 12R</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>45,999.00</p>
+                </a>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        
+        
+        
+       
+        
+        </main>
+            
+        </body>
+        </html>
+

@@ -1,0 +1,365 @@
+
+</html> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="frontend.css">
+    <link rel="stylesheet" href="productdetail.css">
+    <link rel="stylesheet" href="products.html">
+    <style>
+        #productTitle {
+            font-size: 26px;       /* Increased font size for the title */
+            font-weight: bold;     /* Make title bold */
+            margin-bottom: 20px;   /* Add spacing below the title */
+        }
+
+        /* Styling for product features */
+        #productFeatures p {
+            font-size: 18px;        /* Larger font size */
+            line-height: 1.8;       /* Increased line spacing */
+            margin-bottom: 15px;    /* Space between each feature */
+        }
+
+        /* Padding around the features container */
+        #productFeatures {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="assests/logo.PNG" alt="logo" width="350" height="70px">
+            </div>
+            <nav>
+                <ul>
+                    <div class="search-container">
+                        <form class="searchbar">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <li><a href="frontend.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Account</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <div class="smallcontainer">
+                <div class="row">
+                    <!-- Image Thumbnail Table -->
+                    <table class="image-table" style="width:200px; margin-top: 20px;">
+                        <tr>
+                            <td><img id="smallImg" src="assests/asus1.jpeg" alt="Image 1" style="width: 200px;" onclick="changeImage(this)"></td>
+                        </tr>
+                        <tr>
+                            <td><img id="smallImg" src="assests/asus2.jpeg" alt="Image 2" style="width: 200px;" onclick="changeImage(this)"></td>
+                        </tr>
+                        <tr>
+                            <td><img id="smallImg" src="assests/asus3.jpeg" alt="Image 3" style="width: 200px;" onclick="changeImage(this)"></td>
+                        </tr>
+                    </table>
+
+                    <!-- Large Image Display -->
+                    <div class="col2">
+                        <img id="largeImage" src="assests/asus1.jpeg" alt="Main Product Image" width="500" height="500">
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="col2">
+                        <div class="product-details">
+                            <h3 id="productTitle">Product Title Here</h3>
+                            <h3 id="productPrice">Price Here</h3>
+                            <div class="key-features" id="productFeatures">
+                                <!-- Key features and warranty details will be inserted here -->
+                            </div>
+                            <input type="number" value="1" style="width: 90px; height: 50px; font-size: 20px; padding: 10px; margin-right: 10px;">
+                            <a href="#" class="button"><button style="width: 90px; height: 50px; background-color: rgba(237, 135, 135, 0.86);">ADD TO CART</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- JavaScript -->
+        <script>
+            function changeImage(smallImg) {
+                const largeImg = document.getElementById("largeImage");
+                largeImg.src = smallImg.src;
+            }
+        
+            function getUrlParameter(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+        
+            // Define all product details
+            const productDetails = {
+                "asus-zenbook": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Asus-Zenbook14-Evo-Laptop-494352121-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMjQ1MzN8aW1hZ2UvanBlZ3xpbWFnZXMvaDlkL2g0Yi8xMDEwMDA2MTk5NTAzOC5qcGd8YzY2MTA5ZmQ0ZjU0MjNhYzEwNTY0Yzk5MDlhMDQ5NWM5N2ExMzU4MzdhYzU0YTFjYTI5N2VhM2Y0ZjdlNDZiNQ",
+                    title: "Asus Zen Book 14 EVO UX3405MA-PZ552WS Laptop",
+                    price: "1,07,999.00",
+                    features: [
+                        "Intel Core Ultra 5 Processor 125H",
+                        "16 GB RAM",
+                        "1 TB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "asus-vivobook": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Asus-Vivobook16-Laptop-494353034-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjMxN3xpbWFnZS9qcGVnfGltYWdlcy9oMDIvaDZmLzEwMTMwMDAyMDE4MzM0LmpwZ3w3MGEzZGM5Nzg5Nzk0ZDRkYmNjMDdjZGMxYTE0OTdjYzQxZGM4MDQ4MWQxMzE0NTcwM2Q4NzE5MGNmMmFiMDIx",
+                    title: "Asus Vivobook",
+                    price: "40,990.00",
+                    features: [
+                        "Intel Core i5",
+                        "8 GB RAM",
+                        "512 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "dell": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Dell-Ins-Clamshell-3530-493666425-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2MDM0NHxpbWFnZS9qcGVnfGltYWdlcy9oODQvaGVhLzEwMDMzOTgxNDU2NDE0LmpwZ3xkNGU0ZGZmZmFhZjFjZWRiNDYzZTI3OWJlOWVjNTc4MGM2MDMxYmNjMDBhZWRjOWRjZmYyYWI4NWQ5M2EzNjhj",
+                    title: "Dell Inspiron",
+                    price: "65,499.00",
+                    features: [
+                        "Intel Core i7",
+                        "16 GB RAM",
+                        "512 GB SSD",
+                        "2 Year Manufacturer Warranty"
+                    ]
+                },
+                "hp": {
+                    imgSrc: "https://www.reliancedigital.in/medias/HP-15-EC1048AX-Laptops-491997059-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzNzUyMzV8aW1hZ2UvanBlZ3xpbWFnZXMvaDc2L2hmZi85NTg5MTg4NTkxNjQ2LmpwZ3xiZjQyZmJiMDM3Y2RlZjJkNWQ3OWQyNWI5YzNiYWNmOTRiMjc2YTMwZTgwY2MxZDdjZTdmOGI0N2I3NTA4MGVj",
+                    title: "HP 15",
+                    price: "71,099.00",
+                    features: [
+                        "Intel Core i5",
+                        "8 GB RAM",
+                        "1 TB HDD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "leno": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Lenovo-82RK00VVIN-493839067-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyODI3NTB8aW1hZ2UvanBlZ3xpbWFnZXMvaDNmL2hiYi8xMDA2NDY5NzQ1ODcxOC5qcGd8ZjBhY2UwYTZkYzdmMjM0MDkwZDdlNTM3ZWIwZGU1YmNmMTE0MWFmY2QxMmY1Njg2YzNmYjY0Mzc1ODY5OTUyYw",
+                    title: "Lenovo Ideapad Slim",
+                    price: "35,990.00",
+                    features: [
+                        "Intel Core i3",
+                        "8 GB RAM",
+                        "256 GB SSD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "lenogaming": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Lenovo-81Y4018DIN-Laptop-491996943-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMTIxODd8aW1hZ2UvanBlZ3xpbWFnZXMvaDY0L2hiZi85ODQ4ODM5MzQwMDYyLmpwZ3w1ZmI1YzI0ZWMzMmIwYzQxZTJmNmY3ZjBjMTY5M2U5YTZhNjBjMzg3OWJkN2E1OTg3NGFmODBkZDUwYTY2ZjVm",
+                    title: "Lenovo 8DIN Ideapad",
+                    price: "60,990.00",
+                    features: [
+                        "Intel Core i5",
+                        "16 GB RAM",
+                        "1 TB SSD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "lenovo": {
+                    imgSrc: "https://www.reliancedigital.in/medias/HP-15S-du3032TU-Laptops-491946582-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMTYxMjV8aW1hZ2UvanBlZ3xpbWFnZXMvaGUzL2hkMC85NDU0NjA0MTI0MTkwLmpwZ3xkYWQwNGZhYjQzZWUyZDhiM2ZlOTg5OWY4ZDcxOTU1MjU3ZTlmNWM2OTY1NjY1YWU5OGQwNGI0MjY5YmE3ZmVl",
+                    title: "HP 15S",
+                    price: "71,099.00",
+                    features: [
+                        "Intel Core i7",
+                        "16 GB RAM",
+                        "512 GB SSD",
+                        "2 Year Manufacturer Warranty"
+                    ]
+                },
+                "asus": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Asus-TUF-A15-Gaming-Laptop-494422104-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0MzUzMzd8aW1hZ2UvanBlZ3xpbWFnZXMvaDVkL2hhZi8xMDE3Njg0Nzc3MzcyNi5qcGd8NDFjNDI2YzM2NDI1OWJhNjQ5OTI4ZmFhOTYzODAzODk1OTc4NTNiZTM3YWE3ZWEyZDA3OTM2ZjZmNjE3OGIyMA",
+                    title: "Asus TUF Gaming",
+                    price: "89,999.00",
+                    features: [
+                        "AMD Ryzen 7",
+                        "16 GB RAM",
+                        "512 GB SSD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "oneplus": {
+                    imgSrc: "oneplus1.jpeg",
+                    title: "OnePlus Nord",
+                    price: "17,999.00",
+                    features: [
+                        "5G Connectivity",
+                        "6 GB RAM",
+                        "128 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "oppo": {
+                    imgSrc: "https://www.reliancedigital.in/medias/OnePlus-Nord-CE4-Mobile-Phone-494352990-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2NDM5NXxpbWFnZS9qcGVnfGltYWdlcy9oMTEvaDJjLzEwMTI2MjY0NDY3NDg2LmpwZ3xjNjM4YTk2ZDk3OTI2NzYwYmZjZmYzYjg2ZWMzMmI0MGJlYTViNDllNTA0NWM1YWEyYzZlYzBjMmQ4YjkyYjkz",
+                    title: "Oppo K12x",
+                    price: "12,999.00",
+                    features: [
+                        "Snapdragon Processor",
+                        "4 GB RAM",
+                        "64 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "mi": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Redmi-13C-5G-4-GB-RAM-128-GB-Black-Smartphone-494351686-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzNzM5M3xpbWFnZS9qcGVnfGltYWdlcy9oZDcvaDY3LzEwMDkxMjU5ODU0ODc4LmpwZ3wyZDg5NmY0ZTEyM2M2Y2FlY2ZhOGVmMmY4ZDIzMzk2ZjVlYWZjZWYzZDVkYTc1MmVhZmMxMDM4MjljNWVhN2Y0",
+                    title: "Xiaomi",
+                    price: "$45.00",
+                    features: [
+                        "Octa-core Processor",
+                        "4 GB RAM",
+                        "64 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "oneplus12r": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Oppo-K12x-5G-494422234-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w3MzU4MHxpbWFnZS9qcGVnfGltYWdlcy9oYjAvaGNhLzEwMTc5MjEyNTQxOTgyLmpwZ3xiNWZmOGM0MTY0OThiMGFkNzg4MjE0MDBmNDQzMDNiZTdmMGI5M2RhMmI4ZjAxZTIzZGQxMjk5YTY5MjkzNDM2",
+                    title: "OnePlus 12R",
+                    price: "45,999.00",
+                    features: [
+                        "Snapdragon 870",
+                        "8 GB RAM",
+                        "256 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "oneplus12r": {
+                    imgSrc: "ohttps://www.reliancedigital.in/medias/One-Plus-12-R-494352321-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NDg0MjJ8aW1hZ2UvanBlZ3xpbWFnZXMvaGQ0L2g2NC8xMDEwODMzNzU4NjIwNi5qcGd8Yjg2ODRmZmRhNjM2ZmU4ZDEzY2I3NmQ3ZmIyOTNlNmQ1MjllODhjNDcwOTVjZmJlZjNhYWY5NzkzMjdlZjYwNw",
+                    title: "OnePlus 12R",
+                    price: "45,999.00",
+                    features: [
+                        "Snapdragon 870",
+                        "8 GB RAM",
+                        "256 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "kettle": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Butterfly-IBK-1500W-Glass-Kettle-SLV-492391871-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1NTU4N3xpbWFnZS9qcGVnfGltYWdlcy9oNjIvaDE1Lzk3MjYzNTUwMTM2NjIuanBnfGYwYTNmMmYwYTUyNDYzMGNhZjI3YzM2N2JiNjU5ZTYzZjgzNDM2ZTVlOGViMWQ2MWQ2OTQ1ZjYyYWJlMDE0MWY",
+                    title: "Electric Kettle",
+                    price: "2,499.00",
+                    features: [
+                        "1.5 Liters Capacity",
+                        "Boil Dry Protection",
+                        "Stainless Steel Body",
+                        "2 Year Manufacturer Warranty"
+                    ]
+                },
+                "oven": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Haier-HIL2001MWPH-Microwave-Ovens-491959419-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w5MzE3MXxpbWFnZS9qcGVnfGltYWdlcy9oM2IvaDQ4Lzk1NTMwMDU4MzgzNjYuanBnfGQ2YmY0MDhjZGVhZGQ4ZjI4MGViZTMyMzQzOTE4MTk1NTFjNGUyODcxOTY4NWJhNWJiYjcyNzI0MThjZWY4MjE",
+                    title: "Convection Oven",
+                    price: "5,999.00",
+                    features: [
+                        "30 Liters Capacity",
+                        "Multiple Cooking Modes",
+                        "Timer Function",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "cooker": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Wonderchef-NutriPot-6-Ltr-SpecialityAppliances-491604285-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzNTU5NjF8aW1hZ2UvanBlZ3xpbWFnZXMvaDUxL2gwMy85NDYyMDU0NTE4ODE0LmpwZ3wwOTMwZmYzNWYzMjBjN2I4M2Q4N2M5MjQyMGU0NGIyNmI1YjIwNWNhODhlOGE1ZDE5Y2E2NzA4NDUyNGFlMTI5",
+                    title: "Pressure Cooker",
+                    price: "1,199.00",
+                    features: [
+                        "3 Liters Capacity",
+                        "Durable Aluminium Body",
+                        "Safety Valve",
+                        "5 Year Warranty"
+                    ]
+                },
+                "mixer": {
+                    imgSrc: "https://www.reliancedigital.in/medias/PREETHI-MIXER-GRINDER-491213757-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMzQxNjJ8aW1hZ2UvanBlZ3xpbWFnZXMvaDBlL2gxYy85Nzc3MDY1OTE4NDk0LmpwZ3w1YmJkYjk2Y2M3YmY2ZjdjNjVmMjJmYWYyYWVkNjFkMGYzMzhiOWE1YjJkNTNjMzllZGYyYmM1ZTkzNWU4NGRi",
+                    title: "Mixer Grinder",
+                    price: "3,199.00",
+                    features: [
+                        "750 Watts Motor",
+                        "3 Jars Included",
+                        "Overload Protection",
+                        "2 Year Warranty"
+                    ]
+                },
+                "grinder": {
+                    imgSrc: "https://www.reliancedigital.in/medias/PANASONIC-WET-GRINDER-MK-SW200-TIMER-2LT-491186064-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2MzY3OXxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaDIxLzkyMDY3ODQwMzI3OTguanBnfDRiMjkzOTkwMDRkODI0NzFjNDM0ZTkxYmJlZmM1M2M4NWQ3ZjRjYjkwOGEyYzFjNzU1M2I4ODVlOWNiYTMxMjU",
+                    title: "Wet Grinder",
+                    price: "4,999.00",
+                    features: [
+                        "2 Liters Capacity",
+                        "Stone Grinder",
+                        "Easy to Clean",
+                        "1 Year Warranty"
+                    ]
+                },
+                "washingmachine": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Bosch-Semi-Automatic-Washing-20Machine-494338936-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxNjMzMjl8aW1hZ2UvanBlZ3xpbWFnZXMvaDY1L2g4YS8xMDExNTU2NzcxNDMzNC5qcGd8MTlkZjM5YzNkOGQzMDlmOTRmN2E2ZDQxMWI2N2E1NTMzYzEyNzFlOTNhNzNhYjJlYTU5MmMyYThmZGZlYzEwYw",
+                    title: "Washing Machine",
+                    price: "18,999.00",
+                    features: [
+                        "7.5 Kg Capacity",
+                        "Fully Automatic",
+                        "Energy Efficient",
+                        "2 Year Warranty"
+                    ]
+                },
+                "handmixer": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Wonderchef-63153504-HANDMIXER-492391975-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMDMwMjV8aW1hZ2UvanBlZ3xpbWFnZXMvaDg4L2g3ZS85NzM5NzgzMzQwMDYyLmpwZ3wxMzhlYWIwMDliZmU2NDYxMDllYzY5ODZjMmM3YmFiM2M4N2MxZDE5ZjAxNDE1OWFiMjQ1MDYxODgxZjEzNjE0",
+                    title: "Hand Mixer",
+                    price: "1,499.00",
+                    features: [
+                        "5 Speed Settings",
+                        "Compact Design",
+                        "Easy to Store",
+                        "1 Year Warranty"
+                    ]
+                },
+                "ironbox": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Panasonic-NI-P300TASM-Steam-Iron-Blue-491281639-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxMTk2OTZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGU5L2gyZS84OTMxMDA0MzgzMjYyLmpwZ3wzNWRlMjZlOGY3YzI5Y2I0NTAwYzI1NjczMjJlODU1MTVmNjAzMjI1MzdiZjVlYmYyMzQ2NTMzYzE1YjNkOGQ4",
+                    title: "Steam Iron Box",
+                    price: "1,199.00",
+                    features: [
+                        "Non-Stick Soleplate",
+                        "Variable Steam Control",
+                        "Self-Cleaning Function",
+                        "1 Year Warranty"
+                    ]
+                }
+            };
+                
+        
+        
+            // Get product ID from URL and display product details
+            const productId = getUrlParameter('id');
+            const product = productDetails[productId];
+        
+            if (product) {
+                // Update the image, title, and price
+                document.getElementById('largeImage').src = product.imgSrc;
+                document.getElementById('productTitle').innerText = product.title;
+                document.getElementById('productPrice').innerText = `Price: ${product.price}`;
+        
+                // Update features list
+                const featuresContainer = document.getElementById('productFeatures');
+                featuresContainer.innerHTML = `
+                    <p><strong>Warranty:</strong> ${product.features[3]}</p>
+                    <p><strong>Key Features:</strong></p>
+                    ${product.features.slice(0, 3).map(feature => `<p>${feature}</p>`).join('')}
+                `;
+            } else {
+                document.querySelector('.product-details').innerHTML = "<p>Product not found.</p>";
+            }
+        </script>
+        
+    
+</body>
+</html>

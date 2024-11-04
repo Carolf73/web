@@ -1,0 +1,87 @@
+main {
+    padding: 2em 5%;
+}
+
+h1 {
+   /* font-size: xx-large; */
+    margin-bottom: 1em;
+    justify-content: center;
+    margin-left: 36%;
+    margin-top: 1%;
+    text-shadow: black;
+    font-family: "LXGW WenKai TC", cursive;
+    color:rgb(0, 0, 0);
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+}
+
+.filter label {
+    margin-right: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    
+}
+
+.product-card {
+    background-color:white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 2px solid black; 
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Smooth transition */
+
+}
+.product-card:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Make shadow a bit darker */
+    background-color: #f7f7f7;
+    background-color: #6eb3ef;
+    background-image: linear-gradient(62deg, #6eb3ef 0%, #E0C3FC 100%);
+     /* Optional: slightly change the background */
+}
+
+
+.product-card img {
+    width: 100%;
+    max-width: 200px;
+    height:70%;
+    border-radius: 5px;
+   
+
+}
+
+.product-card h4 {
+    font-size: 18px;
+    margin: 15px 0 5px;
+    color: purple;
+}
+
+.rating {
+    color: orange;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    font-weight: bold;
+}
+/* body{
+    background-color: ;
+} */
+.product-grid1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: auto;
+    margin-left: 85px;
+    margin-right: 85px;
+}

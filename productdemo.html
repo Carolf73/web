@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="frontend.css">
+    <link rel="stylesheet" href="productdetail.css">
+   
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="assests/logo.PNG" alt="logo"  width="350" height="70px" >
+            </div>
+            <nav>
+                <ul>
+                    
+                  <div class="search-container">
+                        <form class="searchbar">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                  </div>
+                      
+                  
+                    
+                    <li><a href="frontend.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Account</a></li> 
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+                    
+                </ul>
+               
+            </nav>
+        </div>
+        <main>
+            <!-- singleproduct -->
+            
+            <!-- <div class="smallcontainer">
+                <div class="row">
+                    <table class="image-table" style="width:200px; margin-top: 20px; height:auto ;">
+                        <tr>
+                            <td><img src="asusz2.jpeg" alt="Image 1" style="width: 200px; height: auto; border: 1px solid black;"onclick="changeImage(this)"></td>
+                            
+                        </tr>
+                        <tr><td><img src="asusz3.jpeg" alt="Image 2" style="width: 200px; height: auto; border: 1px solid black;"onclick="changeImage(this)"></td>
+                            ></tr>
+                            <tr><td><img src="asusz4.jpeg" alt="Image 3" style="width: 200px; height: auto; border: 1px solid black;"onclick="changeImage(this)"></td</tr>
+                    </table>
+                    <div class="col2">
+                        <img id="largeImage" src="asauz1.jpeg" alt="dim1" width="500px" height="700px">
+                    </div>
+                    <div class="col2">
+                        <div class="product-details">
+                            <h3>Asus Zen Book 14 EVO UX3405MA-PZ552WS Laptop</h3>
+                            <br>
+                            <h3>1,07,999.00</h3>
+                           
+                            <div class="key-features">
+                                <p style="font-size: x-large;">Warranty:  <br></p> <p style="font-size: large;">1 Year manufacturer warranty</p>
+                                <br>
+                                <br>
+                                <p style="font-size: x-large;"><strong>Key Features:</strong></p>
+                               <br>
+                                <p style="font-size:large;">Processor: Intel Core Ultra 5 Processor 125H 1.2 GHz (18MB Cache, up to 4.5 GHz, 14 cores, 18 Threads)</p>
+                                <p style="font-size: large;">RAM: 16 GB</p>
+                                <p style="font-size:large;">Internal Storage: 1 TB</p>
+                                <input type="number" value="1" style="width: 90px;height: 50px; font-size: 20px;padding: 10px; margin-right: 10px;border: 1px solid black;">
+                                <a href="" class="button"><button style="width: 90px;height: 50px; margin-right: 10px;border: 1px solid black; background-color: rgba(237, 135, 135, 0.86);">ADD TO CART</button></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 -->
+            <!-- </div> -->
+            <main>
+                <!-- Product Selection Section -->
+                <div class="product-selection">
+                    <button onclick="loadProduct('zenbook')">Asus Zenbook</button>
+                    <button onclick="loadProduct('vivobook')">Asus Vivobook</button>
+                </div>
+    
+                <!-- Product Display Section -->
+                <div class="smallcontainer">
+                    <div class="row">
+                        <div class="col2">
+                            <img id="productImage" src="asauz1.jpeg" alt="Product Image" width="500px" height="700px">
+                        </div>
+                        <div class="col2">
+                            <div class="product-details">
+                                <h3 id="productName">Asus Zen Book 14 EVO UX3405MA-PZ552WS Laptop</h3>
+                                <h3 id="productPrice">1,07,999.00</h3>
+                                <!-- Additional product details -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <h1>View more products</h1>
+            <br>
+            
+            
+        
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="asauz1.jpeg" alt="Red Printed T-Shirt">
+                    <h4>AUUD ZEN BOOK </h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>$1,07,999.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="asusv1.jpeg" alt="HRX Sports Shoes">
+                    <h4>ASUS VIVOBOOK</h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>40,999.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="Asus1.jpeg" alt="HRX Gray Trackpants">
+                    <h4>ASUS TUF A15 </h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>61,990.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="dell1.jpeg" alt="Blue Printed T-Shirt">
+                    <h4>DELL INSPIRON </h4>
+                    <div class="rating">★★★★☆</div>
+                    <p>65,499.00</p>
+                </div>
+            </div>
+            
+        
+        
+        
+        
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="app-links">
+                    <h3>DONWLOAD OUR APP</h3>
+                    <p>Download app for android and ios mobile phone.</p>
+                    <div class="store-button">
+                        <img src="assests/gplay.png" alt="google play" width="140" height="50">
+                        <img src="assests/appstore.jpeg" alt="app store" width="140" height="50">
+        
+                    </div>
+                </div>
+                <div class="about">
+                    <img src="assests/logo.PNG" alt="logo" class="logo">
+                    <p>our purpose is to sustainably make the pleasure and benifits of online store to many</p>
+                </div>
+                <div class="usefull-links">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li><a href="#">coupons</a></li>
+                        <li><a href="#">blog post</a></li>
+                        <li><a href="#">return policy</a></li>
+                        <li><a href="#">join affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://twitter.com">Twitter</a></li>
+                        <li><a href="https://instagram.com">Instagram</a></li>
+                        <li><a href="https://youtube.com">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright 2020 - Easy Tutorials</p>
+            </div>
+            </footer>
+            <script>
+                function changeImage(smallImg) {
+                    const largeImg = document.getElementById("largeImage");
+                    largeImg.src = smallImg.src;
+                    const products = {
+                zenbook: {
+                    name: "Asus Zen Book 14 EVO UX3405MA-PZ552WS Laptop",
+                    price: "1,07,999.00",
+                    image: "asauz1.jpeg"
+                },
+                vivobook: {
+                    name: "Asus Vivobook",
+                    price: "40,999.00",
+                    image: "asusv1.jpeg"
+                }
+            };
+
+            function loadProduct(productKey) {
+                const product = products[productKey];
+                document.getElementById('productName').innerText = product.name;
+                document.getElementById('productPrice').innerText = product.price;
+                document.getElementById('productImage').src = product.image;
+            }
+                }
+            </script>
+        </body>
+        </html>

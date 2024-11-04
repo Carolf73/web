@@ -1,0 +1,318 @@
+
+</html> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="frontend.css">
+    <link rel="stylesheet" href="productdetail.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="assets/logo.PNG" alt="logo" width="350" height="70px">
+            </div>
+            <nav>
+                <ul>
+                    <div class="search-container">
+                        <form class="searchbar">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <li><a href="frontend.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Account</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <div class="smallcontainer">
+                <div class="row">
+                    <!-- Image Thumbnail Table -->
+                    <table class="image-table" style="width:200px; margin-top: 20px;">
+                        <tr>
+                            <td><img src="assests/asus1.jpeg" alt="Image 1" style="width: 200px;" onclick="changeImage(this)"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="assests/asus2.jpeg" alt="Image 2" style="width: 200px;" onclick="changeImage(this)"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="assests/asus3.jpeg" alt="Image 3" style="width: 200px;" onclick="changeImage(this)"></td>
+                        </tr>
+                    </table>
+
+                    <!-- Large Image Display -->
+                    <div class="col2">
+                        <img id="largeImage" src="assests/asus1.jpeg" alt="Main Product Image" width="500" height="700">
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="col2">
+                        <div class="product-details">
+                            <h3 id="productTitle">Product Title Here</h3>
+                            <h3 id="productPrice">Price Here</h3>
+                            <div class="key-features" id="productFeatures">
+                                <!-- Key features and warranty details will be inserted here -->
+                            </div>
+                            <input type="number" value="1" style="width: 90px; height: 50px; font-size: 20px; padding: 10px; margin-right: 10px;">
+                            <a href="#" class="button"><button style="width: 90px; height: 50px; background-color: rgba(237, 135, 135, 0.86);">ADD TO CART</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- JavaScript -->
+        <!-- <script>
+            function changeImage(smallImg) {
+                const largeImg = document.getElementById("largeImage");
+                largeImg.src = smallImg.src;
+            }
+        
+            function getUrlParameter(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+        
+            // Define all product details
+            const productDetails = {
+                "asus-zenbook": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Asus-Zenbook14-Evo-Laptop-494352121-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyMjQ1MzN8aW1hZ2UvanBlZ3xpbWFnZXMvaDlkL2g0Yi8xMDEwMDA2MTk5NTAzOC5qcGd8YzY2MTA5ZmQ0ZjU0MjNhYzEwNTY0Yzk5MDlhMDQ5NWM5N2ExMzU4MzdhYzU0YTFjYTI5N2VhM2Y0ZjdlNDZiNQ",
+                    title: "Asus Zen Book 14 EVO UX3405MA-PZ552WS Laptop",
+                    price: "1,07,999.00",
+                    features: [
+                        "Intel Core Ultra 5 Processor 125H",
+                        "16 GB RAM",
+                        "1 TB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "asus-vivobook": {
+                    imgSrc: "https://www.reliancedigital.in/medias/Asus-Vivobook16-Laptop-494353034-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2MjMxN3xpbWFnZS9qcGVnfGltYWdlcy9oMDIvaDZmLzEwMTMwMDAyMDE4MzM0LmpwZ3w3MGEzZGM5Nzg5Nzk0ZDRkYmNjMDdjZGMxYTE0OTdjYzQxZGM4MDQ4MWQxMzE0NTcwM2Q4NzE5MGNmMmFiMDIx",
+                    title: "Asus Vivobook",
+                    price: "40,990.00",
+                    features: [
+                        "Intel Core i5",
+                        "8 GB RAM",
+                        "512 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "dell": {
+                    imgSrc: "assests/dell1.jpeg",
+                    title: "Dell Inspiron",
+                    price: "65,499.00",
+                    features: [
+                        "Intel Core i7",
+                        "16 GB RAM",
+                        "512 GB SSD",
+                        "2 Year Manufacturer Warranty"
+                    ]
+                },
+                "hp": {
+                    imgSrc: "assests/hp1.jpeg",
+                    title: "HP 15",
+                    price: "71,099.00",
+                    features: [
+                        "Intel Core i5",
+                        "8 GB RAM",
+                        "1 TB HDD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "leno": {
+                    imgSrc: "assests/leno1.jpeg",
+                    title: "Lenovo Ideapad Slim",
+                    price: "35,990.00",
+                    features: [
+                        "Intel Core i3",
+                        "8 GB RAM",
+                        "256 GB SSD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "lenogaming": {
+                    imgSrc: "assests/lenogaming1.jpeg",
+                    title: "Lenovo 8DIN Ideapad",
+                    price: "60,990.00",
+                    features: [
+                        "Intel Core i5",
+                        "16 GB RAM",
+                        "1 TB SSD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "lenovo": {
+                    imgSrc: "assests/lenovo1.jpeg",
+                    title: "Lenovo Yoga",
+                    price: "71,099.00",
+                    features: [
+                        "Intel Core i7",
+                        "16 GB RAM",
+                        "512 GB SSD",
+                        "2 Year Manufacturer Warranty"
+                    ]
+                },
+                "asus": {
+                    imgSrc: "assests/Asus1.jpeg",
+                    title: "Asus TUF Gaming",
+                    price: "89,999.00",
+                    features: [
+                        "AMD Ryzen 7",
+                        "16 GB RAM",
+                        "512 GB SSD",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "oneplus": {
+                    imgSrc: "oneplus1.jpeg",
+                    title: "OnePlus Nord",
+                    price: "17,999.00",
+                    features: [
+                        "5G Connectivity",
+                        "6 GB RAM",
+                        "128 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "oppo": {
+                    imgSrc: "oppok12x 1.jpeg",
+                    title: "Oppo K12x",
+                    price: "12,999.00",
+                    features: [
+                        "Snapdragon Processor",
+                        "4 GB RAM",
+                        "64 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "mi": {
+                    imgSrc: "mi1.jpeg",
+                    title: "Xiaomi",
+                    price: "$45.00",
+                    features: [
+                        "Octa-core Processor",
+                        "4 GB RAM",
+                        "64 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                "oneplus12r": {
+                    imgSrc: "oneplus12r2.jpeg",
+                    title: "OnePlus 12R",
+                    price: "45,999.00",
+                    features: [
+                        "Snapdragon 870",
+                        "8 GB RAM",
+                        "256 GB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                }
+            };
+        
+            // Get product ID from URL and display product details
+            const productId = getUrlParameter('id');
+            const product = productDetails[productId];
+        
+            if (product) {
+                // Update the image, title, and price
+                document.getElementById('largeImage').src = product.imgSrc;
+                document.getElementById('productTitle').innerText = product.title;
+                document.getElementById('productPrice').innerText = `Price: ${product.price}`;
+        
+                // Update features list
+                const featuresContainer = document.getElementById('productFeatures');
+                featuresContainer.innerHTML = `
+                    <p><strong>Warranty:</strong> ${product.features[3]}</p>
+                    <p><strong>Key Features:</strong></p>
+                    ${product.features.slice(0, 3).map(feature => `<p>${feature}</p>`).join('')}
+                `;
+            } else {
+                document.querySelector('.product-details').innerHTML = "<p>Product not found.</p>";
+            }
+        </script>
+         -->
+         <script>
+            // Sample product data with multiple images for each product
+            const productDetails = {
+                "asus-zenbook": {
+                    images: [
+                        "assests/asus1.jpeg",
+                        "assests/asusv2.jpeg",
+                        "assests/asusv4.jpeg"
+                    ],
+                    title: "Asus Zen Book 14 EVO UX3405MA-PZ552WS Laptop",
+                    price: "1,07,999.00",
+                    features: [
+                        "Intel Core Ultra 5 Processor 125H",
+                        "16 GB RAM",
+                        "1 TB Storage",
+                        "1 Year Manufacturer Warranty"
+                    ]
+                },
+                // Add other products similarly...
+            };
+
+            function getUrlParameter(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            function changeMainImage(smallImg) {
+                const largeImg = document.getElementById("largeImage");
+                largeImg.src = smallImg.src;
+            }
+
+            function updateThumbnails() {
+                const productId = getUrlParameter('id');
+                const product = productDetails[productId];
+
+                if (product) {
+                    const thumbnails = product.images;
+                    const thumbnailContainer = document.getElementById("thumbnailContainer");
+
+                    thumbnailContainer.innerHTML = thumbnails.map((imgSrc, index) => `
+                        <tr>
+                            <td><img src="${imgSrc}" alt="Image ${index + 1}" style="width: 200px;" onclick="changeMainImage(this)"></td>
+                        </tr>
+                    `).join('');
+                }
+            }
+
+            // Set initial product details and thumbnails based on URL parameter
+            (function initializePage() {
+                const productId = getUrlParameter('id');
+                const product = productDetails[productId];
+
+                if (product) {
+                    // Set initial main image
+                    document.getElementById("largeImage").src = product.images[0];
+
+                    // Set thumbnails
+                    updateThumbnails();
+
+                    // Display product title, price, and features
+                    document.getElementById('productTitle').innerText = product.title;
+                    document.getElementById('productPrice').innerText = `Price: ${product.price}`;
+                    document.getElementById('productFeatures').innerHTML = `
+                        <p><strong>Warranty:</strong> ${product.features[3]}</p>
+                        <p><strong>Key Features:</strong></p>
+                        ${product.features.slice(0, 3).map(feature => `<p>${feature}</p>`).join('')}
+                    `;
+                } else {
+                    document.querySelector('.product-details').innerHTML = "<p>Product not found.</p>";
+                }
+            })();
+        </script>
+    </div>
+</body>
+</html>
+</body>
+</html>
